@@ -1,0 +1,4332 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/agmen-hu/node-datapumps"
+
+    >datapumps (v0.5.0)</a>
+</h1>
+<h4>Node.js ETL (Extract, Transform, Load) toolkit for easy data import, export or transfer between systems.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.datapumps">module datapumps</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Buffer">
+            function <span class="apidocSignatureSpan">datapumps.</span>Buffer
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group">
+            function <span class="apidocSignatureSpan">datapumps.</span>Group
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump">
+            function <span class="apidocSignatureSpan">datapumps.</span>Pump
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.PumpingFailedError">
+            function <span class="apidocSignatureSpan">datapumps.</span>PumpingFailedError
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.group">
+            function <span class="apidocSignatureSpan">datapumps.</span>group
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">datapumps.</span>Buffer.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">datapumps.</span>Group.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">datapumps.</span>Pump.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">datapumps.</span>PumpingFailedError.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">datapumps.</span>mixin</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.datapumps.Buffer">module datapumps.Buffer</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">datapumps.Buffer.</span>usingDomains</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Buffer.Buffer">
+            function <span class="apidocSignatureSpan">datapumps.</span>Buffer
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Buffer.EventEmitter">
+            function <span class="apidocSignatureSpan">datapumps.Buffer.</span>EventEmitter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Buffer.defaultBufferSize">
+            function <span class="apidocSignatureSpan">datapumps.Buffer.</span>defaultBufferSize
+            <span class="apidocSignatureSpan">(size)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Buffer.init">
+            function <span class="apidocSignatureSpan">datapumps.Buffer.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Buffer.listenerCount">
+            function <span class="apidocSignatureSpan">datapumps.Buffer.</span>listenerCount
+            <span class="apidocSignatureSpan">(emitter, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">datapumps.Buffer.</span>_defaultBufferSize</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">datapumps.Buffer.</span>defaultMaxListeners</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">datapumps.Buffer.</span>__super__</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.datapumps.Buffer.prototype">module datapumps.Buffer.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Buffer.prototype._writeArrayItem">
+            function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>_writeArrayItem
+            <span class="apidocSignatureSpan">(dataArray, pendingPromise, index)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Buffer.prototype.append">
+            function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>append
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Buffer.prototype.appendArray">
+            function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>appendArray
+            <span class="apidocSignatureSpan">(dataArray)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Buffer.prototype.constructor">
+            function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>constructor
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Buffer.prototype.getContent">
+            function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>getContent
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Buffer.prototype.isEmpty">
+            function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>isEmpty
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Buffer.prototype.isEnded">
+            function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>isEnded
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Buffer.prototype.isFull">
+            function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>isFull
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Buffer.prototype.isSealed">
+            function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>isSealed
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Buffer.prototype.read">
+            function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>read
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Buffer.prototype.readAsync">
+            function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>readAsync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Buffer.prototype.seal">
+            function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>seal
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Buffer.prototype.write">
+            function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>write
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Buffer.prototype.writeArrayAsync">
+            function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>writeArrayAsync
+            <span class="apidocSignatureSpan">(dataArray)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Buffer.prototype.writeAsync">
+            function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>writeAsync
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.datapumps.Group">module datapumps.Group</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">datapumps.Group.</span>usingDomains</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.Group">
+            function <span class="apidocSignatureSpan">datapumps.</span>Group
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.EventEmitter">
+            function <span class="apidocSignatureSpan">datapumps.Group.</span>EventEmitter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.init">
+            function <span class="apidocSignatureSpan">datapumps.Group.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.listenerCount">
+            function <span class="apidocSignatureSpan">datapumps.Group.</span>listenerCount
+            <span class="apidocSignatureSpan">(emitter, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">datapumps.Group.</span>ABORTED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">datapumps.Group.</span>ENDED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">datapumps.Group.</span>PAUSED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">datapumps.Group.</span>STARTED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">datapumps.Group.</span>STOPPED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">datapumps.Group.</span>defaultMaxListeners</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">datapumps.Group.</span>__super__</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.datapumps.Group.prototype">module datapumps.Group.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.prototype._endGroup">
+            function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>_endGroup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.prototype._getAllStoppedPumps">
+            function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>_getAllStoppedPumps
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.prototype._getBufferByPath">
+            function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>_getBufferByPath
+            <span class="apidocSignatureSpan">(bufferPath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.prototype.abort">
+            function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>abort
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.prototype.addInputPump">
+            function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>addInputPump
+            <span class="apidocSignatureSpan">(name, pump)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.prototype.addPump">
+            function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>addPump
+            <span class="apidocSignatureSpan">(name, pump)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.prototype.buffer">
+            function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>buffer
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.prototype.constructor">
+            function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.prototype.debugMode">
+            function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>debugMode
+            <span class="apidocSignatureSpan">(_debug)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.prototype.expose">
+            function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>expose
+            <span class="apidocSignatureSpan">(exposedName, bufferPath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.prototype.from">
+            function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>from
+            <span class="apidocSignatureSpan">(buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.prototype.id">
+            function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>id
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.prototype.inputPump">
+            function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>inputPump
+            <span class="apidocSignatureSpan">(pumpName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.prototype.mixin">
+            function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>mixin
+            <span class="apidocSignatureSpan">(mixins)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.prototype.pause">
+            function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>pause
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.prototype.process">
+            function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>process
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.prototype.pump">
+            function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>pump
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.prototype.pumps">
+            function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>pumps
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.prototype.resume">
+            function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>resume
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.prototype.run">
+            function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>run
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.prototype.runPumps">
+            function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>runPumps
+            <span class="apidocSignatureSpan">(pumps)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Group.prototype.start">
+            function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.datapumps.Pump">module datapumps.Pump</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">datapumps.Pump.</span>usingDomains</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.Pump">
+            function <span class="apidocSignatureSpan">datapumps.</span>Pump
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.EventEmitter">
+            function <span class="apidocSignatureSpan">datapumps.Pump.</span>EventEmitter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.init">
+            function <span class="apidocSignatureSpan">datapumps.Pump.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.listenerCount">
+            function <span class="apidocSignatureSpan">datapumps.Pump.</span>listenerCount
+            <span class="apidocSignatureSpan">(emitter, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">datapumps.Pump.</span>ABORTED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">datapumps.Pump.</span>ENDED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">datapumps.Pump.</span>PAUSED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">datapumps.Pump.</span>STARTED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">datapumps.Pump.</span>STOPPED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">datapumps.Pump.</span>defaultMaxListeners</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">datapumps.Pump.</span>__super__</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.datapumps.Pump.prototype">module datapumps.Pump.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype._outputBufferEnded">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>_outputBufferEnded
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype._process">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>_process
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype._pump">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>_pump
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype._registerErrorBufferEvents">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>_registerErrorBufferEvents
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.abort">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>abort
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.buffer">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>buffer
+            <span class="apidocSignatureSpan">(name, buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.buffers">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>buffers
+            <span class="apidocSignatureSpan">(buffers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.constructor">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.copy">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>copy
+            <span class="apidocSignatureSpan">(data, buffers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.createBuffer">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>createBuffer
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.debug">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>debug
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.debugMode">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>debugMode
+            <span class="apidocSignatureSpan">(_debug)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.errorBuffer">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>errorBuffer
+            <span class="apidocSignatureSpan">(buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.from">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>from
+            <span class="apidocSignatureSpan">(buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.id">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>id
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.isEnded">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>isEnded
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.isPaused">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>isPaused
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.isStarted">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>isStarted
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.isStopped">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>isStopped
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.logErrorsToConsole">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>logErrorsToConsole
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.mixin">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>mixin
+            <span class="apidocSignatureSpan">(mixins)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.pause">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>pause
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.process">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>process
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.resume">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>resume
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.run">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>run
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.sealOutputBuffers">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>sealOutputBuffers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.sourceEnded">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>sourceEnded
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.start">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.to">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>to
+            <span class="apidocSignatureSpan">(pump, bufferName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.whenFinished">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>whenFinished
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.Pump.prototype.writeError">
+            function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>writeError
+            <span class="apidocSignatureSpan">(err)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.datapumps.PumpingFailedError">module datapumps.PumpingFailedError</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.PumpingFailedError.PumpingFailedError">
+            function <span class="apidocSignatureSpan">datapumps.</span>PumpingFailedError
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.PumpingFailedError.captureStackTrace">
+            function <span class="apidocSignatureSpan">datapumps.PumpingFailedError.</span>captureStackTrace
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">datapumps.PumpingFailedError.</span>stackTraceLimit</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">datapumps.PumpingFailedError.</span>__super__</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.datapumps.PumpingFailedError.prototype">module datapumps.PumpingFailedError.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.PumpingFailedError.prototype.constructor">
+            function <span class="apidocSignatureSpan">datapumps.PumpingFailedError.prototype.</span>constructor
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">datapumps.PumpingFailedError.prototype.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.datapumps.mixin">module datapumps.mixin</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.mixin.BatchMixin">
+            function <span class="apidocSignatureSpan">datapumps.mixin.</span>BatchMixin
+            <span class="apidocSignatureSpan">(target)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.mixin.BufferDebugMixin">
+            function <span class="apidocSignatureSpan">datapumps.mixin.</span>BufferDebugMixin
+            <span class="apidocSignatureSpan">(pump)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.mixin.CsvWriterMixin">
+            function <span class="apidocSignatureSpan">datapumps.mixin.</span>CsvWriterMixin
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.mixin.ExcelReaderMixin">
+            function <span class="apidocSignatureSpan">datapumps.mixin.</span>ExcelReaderMixin
+            <span class="apidocSignatureSpan">(_arg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.mixin.ExcelWriterMixin">
+            function <span class="apidocSignatureSpan">datapumps.mixin.</span>ExcelWriterMixin
+            <span class="apidocSignatureSpan">(onMixin)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.mixin.MergeMixin">
+            function <span class="apidocSignatureSpan">datapumps.mixin.</span>MergeMixin
+            <span class="apidocSignatureSpan">(pump)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.mixin.MongodbMixin">
+            function <span class="apidocSignatureSpan">datapumps.mixin.</span>MongodbMixin
+            <span class="apidocSignatureSpan">(db)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.mixin.MysqlMixin">
+            function <span class="apidocSignatureSpan">datapumps.mixin.</span>MysqlMixin
+            <span class="apidocSignatureSpan">(connection)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.mixin.ObjectTransformMixin">
+            function <span class="apidocSignatureSpan">datapumps.mixin.</span>ObjectTransformMixin
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.datapumps.mixin.RestMixin">
+            function <span class="apidocSignatureSpan">datapumps.mixin.</span>RestMixin
+            <span class="apidocSignatureSpan">(target)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.datapumps" id="apidoc.module.datapumps">module datapumps</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Buffer" id="apidoc.element.datapumps.Buffer">
+        function <span class="apidocSignatureSpan">datapumps.</span>Buffer
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Buffer(options) {
+  var _ref, _ref1, _ref2;
+  if (options == null) {
+    options = {};
+  }
+  this.content = (_ref = options.content) != null ? _ref : [];
+  this.size = (_ref1 = options.size) != null ? _ref1 : Buffer._defaultBufferSize;
+  this._sealed = (_ref2 = options.sealed) != null ? _ref2 : false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group" id="apidoc.element.datapumps.Group">
+        function <span class="apidocSignatureSpan">datapumps.</span>Group
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Group() {
+  Group.__super__.constructor.call(this);
+  this._pumps = {};
+  this._exposedBuffers = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump" id="apidoc.element.datapumps.Pump">
+        function <span class="apidocSignatureSpan">datapumps.</span>Pump
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Pump() {
+  this._state = Pump.STOPPED;
+  this._from = null;
+  this._id = null;
+  this._errorBuffer = new Buffer;
+  this._debug = false;
+  this.buffers({
+    output: new Buffer
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   The `.logErrorsToConsole()` will log any error to the console, surprisingly. The pump will start
+   on calling `.run()`. It returns a [promise](https://promisesaplus.com/) that resolves when the pump finished.
+
+## Pump
+A pump reads data from its input buffer or stream and copies it to the output buffer by default:
+```js
+datapumps = require(&#x27;datapumps&#x27;);
+(pump = new datapumps.<span class="apidocCodeKeywordSpan">Pump</span>())
+  .from(&#x3c;put a nodejs stream or datapumps buffer here&#x3e;)
+  .run()
+```
+
+To access the output buffer, use the `.buffer()` method, which returns a Buffer instance:
+```js
+buffer = pump.buffer(&#x27;output&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.PumpingFailedError" id="apidoc.element.datapumps.PumpingFailedError">
+        function <span class="apidocSignatureSpan">datapumps.</span>PumpingFailedError
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PumpingFailedError(message) {
+  this.message = message != null ? message : &#x27;Pumping failed. See .errorBuffer() contents for error messages&#x27;;
+  PumpingFailedError.__super__.constructor.call(this, this.message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.group" id="apidoc.element.datapumps.group">
+        function <span class="apidocSignatureSpan">datapumps.</span>group
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">group = function () { return new Group(); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+})
+```
+
+## Pump group
+You often need multiple pumps to complete an ETL task. Pump groups help starting multiple pump in
+one step, and also enables handling the event when every pump ended:
+```js
+sendMails = datapumps.<span class="apidocCodeKeywordSpan">group</span>();
+sendMails.addPump(&#x27;tickets&#x27;)
+...;
+sendMails.addPump(&#x27;reminderMailer&#x27;)
+...;
+sendMails
+.start()
+.whenFinished().then(function() {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.datapumps.Buffer" id="apidoc.module.datapumps.Buffer">module datapumps.Buffer</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Buffer.Buffer" id="apidoc.element.datapumps.Buffer.Buffer">
+        function <span class="apidocSignatureSpan">datapumps.</span>Buffer
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Buffer(options) {
+  var _ref, _ref1, _ref2;
+  if (options == null) {
+    options = {};
+  }
+  this.content = (_ref = options.content) != null ? _ref : [];
+  this.size = (_ref1 = options.size) != null ? _ref1 : Buffer._defaultBufferSize;
+  this._sealed = (_ref2 = options.sealed) != null ? _ref2 : false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Buffer.EventEmitter" id="apidoc.element.datapumps.Buffer.EventEmitter">
+        function <span class="apidocSignatureSpan">datapumps.Buffer.</span>EventEmitter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Buffer.defaultBufferSize" id="apidoc.element.datapumps.Buffer.defaultBufferSize">
+        function <span class="apidocSignatureSpan">datapumps.Buffer.</span>defaultBufferSize
+        <span class="apidocSignatureSpan">(size)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defaultBufferSize = function (size) {
+  if (size == null) {
+    return Buffer._defaultBufferSize;
+  }
+  return Buffer._defaultBufferSize = size;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Buffer.init" id="apidoc.element.datapumps.Buffer.init">
+        function <span class="apidocSignatureSpan">datapumps.Buffer.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+  this.domain = null;
+  if (EventEmitter.usingDomains) {
+    // if there is an active domain, then attach to it.
+    domain = domain || require(&#x27;domain&#x27;);
+    if (domain.active &#x26;&#x26; !(this instanceof domain.Domain)) {
+      this.domain = domain.active;
+    }
+  }
+
+  if (!this._events || this._events === Object.getPrototypeOf(this)._events) {
+    this._events = new EventHandlers();
+    this._eventsCount = 0;
+  }
+
+  this._maxListeners = this._maxListeners || undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Buffer.listenerCount" id="apidoc.element.datapumps.Buffer.listenerCount">
+        function <span class="apidocSignatureSpan">datapumps.Buffer.</span>listenerCount
+        <span class="apidocSignatureSpan">(emitter, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenerCount = function (emitter, type) {
+  if (typeof emitter.listenerCount === &#x27;function&#x27;) {
+    return emitter.listenerCount(type);
+  } else {
+    return listenerCount.call(emitter, type);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.datapumps.Buffer.prototype" id="apidoc.module.datapumps.Buffer.prototype">module datapumps.Buffer.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Buffer.prototype._writeArrayItem" id="apidoc.element.datapumps.Buffer.prototype._writeArrayItem">
+        function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>_writeArrayItem
+        <span class="apidocSignatureSpan">(dataArray, pendingPromise, index)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_writeArrayItem = function (dataArray, pendingPromise, index) {
+  return this.writeAsync(dataArray[index]).done((function(_this) {
+    return function() {
+      if (index &#x3e;= dataArray.length - 1) {
+        return pendingPromise.resolve();
+      }
+      return _this._writeArrayItem(dataArray, pendingPromise, index + 1);
+    };
+  })(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Buffer.prototype.append" id="apidoc.element.datapumps.Buffer.prototype.append">
+        function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>append
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">append = function (data) {
+  this.appendArray([data]);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Buffer.prototype.appendArray" id="apidoc.element.datapumps.Buffer.prototype.appendArray">
+        function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>appendArray
+        <span class="apidocSignatureSpan">(dataArray)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">appendArray = function (dataArray) {
+  var data, newSize, _i, _len;
+  newSize = this.content.length + dataArray.length;
+  if (newSize &#x3e; this.size) {
+    this.size = newSize;
+  }
+  for (_i = 0, _len = dataArray.length; _i &#x3c; _len; _i++) {
+    data = dataArray[_i];
+    this.write(data);
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Buffer.prototype.constructor" id="apidoc.element.datapumps.Buffer.prototype.constructor">
+        function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>constructor
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Buffer(options) {
+  var _ref, _ref1, _ref2;
+  if (options == null) {
+    options = {};
+  }
+  this.content = (_ref = options.content) != null ? _ref : [];
+  this.size = (_ref1 = options.size) != null ? _ref1 : Buffer._defaultBufferSize;
+  this._sealed = (_ref2 = options.sealed) != null ? _ref2 : false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Buffer.prototype.getContent" id="apidoc.element.datapumps.Buffer.prototype.getContent">
+        function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>getContent
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getContent = function () {
+  return this.content;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+group
+  .start()
+  .whenFinished()
+    .then(function() {
+      if (!group.errorBuffer().isEmpty()) {
+        console.log(&#x22;Transfer finished, but with errors.&#x22;);
+        // errors list will be at group.errorBuffer().<span class="apidocCodeKeywordSpan">getContent</span>()
+      }
+    })
+    .catch(function() {
+      console.log(&#x22;Pump group failed with errors&#x22;);
+      // errors list will be at group.errorBuffer().getContent()
+    });
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Buffer.prototype.isEmpty" id="apidoc.element.datapumps.Buffer.prototype.isEmpty">
+        function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>isEmpty
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isEmpty = function () {
+  return this.content.length === 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+the pump group has an error buffer (`.errorBuffer()`) which can hold ten error messages by default.
+When the error buffer fills up, `error` event is triggered and `.whenFinised()` promise is rejected:
+```js
+group
+.start()
+.whenFinished()
+  .then(function() {
+    if (!group.errorBuffer().<span class="apidocCodeKeywordSpan">isEmpty</span>()) {
+      console.log(&#x22;Transfer finished, but with errors.&#x22;);
+      // errors list will be at group.errorBuffer().getContent()
+    }
+  })
+  .catch(function() {
+    console.log(&#x22;Pump group failed with errors&#x22;);
+    // errors list will be at group.errorBuffer().getContent()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Buffer.prototype.isEnded" id="apidoc.element.datapumps.Buffer.prototype.isEnded">
+        function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>isEnded
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isEnded = function () {
+  return this.isSealed() &#x26;&#x26; this.isEmpty();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Buffer.prototype.isFull" id="apidoc.element.datapumps.Buffer.prototype.isFull">
+        function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>isFull
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isFull = function () {
+  return this.content.length &#x3e;= this.size;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Buffer.prototype.isSealed" id="apidoc.element.datapumps.Buffer.prototype.isSealed">
+        function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>isSealed
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isSealed = function () {
+  return this._sealed === true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Buffer.prototype.read" id="apidoc.element.datapumps.Buffer.prototype.read">
+        function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>read
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">read = function () {
+  var result;
+  if (this.isEmpty()) {
+    throw new Error(&#x27;Buffer is empty&#x27;);
+  }
+  result = this.content.shift();
+  this.emit(&#x27;release&#x27;, result);
+  if (this.isEmpty()) {
+    this.emit(&#x27;empty&#x27;);
+    if (this._sealed === true) {
+      this.emit(&#x27;end&#x27;);
+    }
+  }
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Buffer.prototype.readAsync" id="apidoc.element.datapumps.Buffer.prototype.readAsync">
+        function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>readAsync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readAsync = function () {
+  if (!this.isEmpty()) {
+    return Promise.resolve(this.read());
+  } else {
+    return new Promise((function(_this) {
+      return function(resolve, reject) {
+        return _this.once(&#x27;write&#x27;, function() {
+          return resolve(_this.readAsync());
+        });
+      };
+    })(this));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Buffer.prototype.seal" id="apidoc.element.datapumps.Buffer.prototype.seal">
+        function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>seal
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">seal = function () {
+  if (this._sealed === true) {
+    throw new Error(&#x27;Buffer already sealed&#x27;);
+  }
+  this._sealed = true;
+  this.emit(&#x27;sealed&#x27;);
+  if (this.isEmpty()) {
+    this.emit(&#x27;end&#x27;);
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Buffer.prototype.write" id="apidoc.element.datapumps.Buffer.prototype.write">
+        function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>write
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function (data) {
+  if (this._sealed === true) {
+    throw new Error(&#x27;Cannot write sealed buffer&#x27;);
+  }
+  if (this.isFull()) {
+    throw new Error(&#x27;Buffer is full&#x27;);
+  }
+  this.content.push(data);
+  this.emit(&#x27;write&#x27;, data);
+  if (this.isFull()) {
+    this.emit(&#x27;full&#x27;);
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Buffer.prototype.writeArrayAsync" id="apidoc.element.datapumps.Buffer.prototype.writeArrayAsync">
+        function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>writeArrayAsync
+        <span class="apidocSignatureSpan">(dataArray)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeArrayAsync = function (dataArray) {
+  var result;
+  if (dataArray.length === 0) {
+    return Promise.resolve();
+  }
+  result = Promise.pending();
+  this._writeArrayItem(dataArray, result, 0);
+  return result.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Buffer.prototype.writeAsync" id="apidoc.element.datapumps.Buffer.prototype.writeAsync">
+        function <span class="apidocSignatureSpan">datapumps.Buffer.prototype.</span>writeAsync
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeAsync = function (data) {
+  if (!this.isFull()) {
+    return Promise.resolve(this.write(data));
+  } else {
+    return new Promise((function(_this) {
+      return function(resolve, reject) {
+        return _this.once(&#x27;release&#x27;, function() {
+          return resolve(_this.writeAsync(data));
+        });
+      };
+    })(this));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Transforming data
+Use the `.process()` method to set the function which processes data:
+```js
+ticketsPump
+  .process(function(ticket) {
+    ticket.title = &#x27;URGENT: &#x27; + ticket.title;
+    return this.buffer(&#x27;openTickets&#x27;).<span class="apidocCodeKeywordSpan">writeAsync</span>(ticket);
+  });
+```
+The argument of `.process()` is a function that will be executed after the pump reads a data item.
+The function is executed in the context of the pump object, i.e. `this` refers to the pump itself. The
+function should return a Promise that fulfills when the data is processed (i.e. written into a buffer
+or stored elsewhere).
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.datapumps.Group" id="apidoc.module.datapumps.Group">module datapumps.Group</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.Group" id="apidoc.element.datapumps.Group.Group">
+        function <span class="apidocSignatureSpan">datapumps.</span>Group
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Group() {
+  Group.__super__.constructor.call(this);
+  this._pumps = {};
+  this._exposedBuffers = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.EventEmitter" id="apidoc.element.datapumps.Group.EventEmitter">
+        function <span class="apidocSignatureSpan">datapumps.Group.</span>EventEmitter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.init" id="apidoc.element.datapumps.Group.init">
+        function <span class="apidocSignatureSpan">datapumps.Group.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+  this.domain = null;
+  if (EventEmitter.usingDomains) {
+    // if there is an active domain, then attach to it.
+    domain = domain || require(&#x27;domain&#x27;);
+    if (domain.active &#x26;&#x26; !(this instanceof domain.Domain)) {
+      this.domain = domain.active;
+    }
+  }
+
+  if (!this._events || this._events === Object.getPrototypeOf(this)._events) {
+    this._events = new EventHandlers();
+    this._eventsCount = 0;
+  }
+
+  this._maxListeners = this._maxListeners || undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.listenerCount" id="apidoc.element.datapumps.Group.listenerCount">
+        function <span class="apidocSignatureSpan">datapumps.Group.</span>listenerCount
+        <span class="apidocSignatureSpan">(emitter, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenerCount = function (emitter, type) {
+  if (typeof emitter.listenerCount === &#x27;function&#x27;) {
+    return emitter.listenerCount(type);
+  } else {
+    return listenerCount.call(emitter, type);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.datapumps.Group.prototype" id="apidoc.module.datapumps.Group.prototype">module datapumps.Group.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.prototype._endGroup" id="apidoc.element.datapumps.Group.prototype._endGroup">
+        function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>_endGroup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_endGroup = function () {
+  this._state = Group.ENDED;
+  return this.emit(&#x27;end&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.prototype._getAllStoppedPumps" id="apidoc.element.datapumps.Group.prototype._getAllStoppedPumps">
+        function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>_getAllStoppedPumps
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getAllStoppedPumps = function () {
+  var name, pump, result, _ref;
+  result = [];
+  _ref = this._pumps;
+  for (name in _ref) {
+    pump = _ref[name];
+    if (pump.isStopped()) {
+      result.push(name);
+    }
+  }
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.prototype._getBufferByPath" id="apidoc.element.datapumps.Group.prototype._getBufferByPath">
+        function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>_getBufferByPath
+        <span class="apidocSignatureSpan">(bufferPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getBufferByPath = function (bufferPath) {
+  var bufferName, bufferNames, pumpName, _ref;
+  _ref = bufferPath.split(&#x27;/&#x27;), pumpName = _ref[0], bufferNames = 2 &#x3c;= _ref.length ? __slice.call(_ref, 1) : [];
+  bufferName = bufferNames.length ? bufferNames.join(&#x27;/&#x27;) : &#x27;output&#x27;;
+  return this.pump(pumpName).buffer(bufferName);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.prototype.abort" id="apidoc.element.datapumps.Group.prototype.abort">
+        function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>abort
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">abort = function () {
+  var name, pump;
+  if (this._state !== Pump.STARTED) {
+    throw new Error(&#x27;Cannot .abort() a group that is not running&#x27;);
+  }
+  return Promise.all((function() {
+    var _ref, _results;
+    _ref = this._pumps;
+    _results = [];
+    for (name in _ref) {
+      pump = _ref[name];
+      if (pump.isStarted()) {
+        _results.push(pump.abort());
+      }
+    }
+    return _results;
+  }).call(this)).then((function(_this) {
+    return function() {
+      return _this._state = Group.ABORTED;
+    };
+  })(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.prototype.addInputPump" id="apidoc.element.datapumps.Group.prototype.addInputPump">
+        function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>addInputPump
+        <span class="apidocSignatureSpan">(name, pump)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addInputPump = function (name, pump) {
+  var result;
+  if (pump == null) {
+    pump = null;
+  }
+  result = this.addPump(name, pump);
+  this.inputPump(name);
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.prototype.addPump" id="apidoc.element.datapumps.Group.prototype.addPump">
+        function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>addPump
+        <span class="apidocSignatureSpan">(name, pump)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addPump = function (name, pump) {
+  var pumpId;
+  if (pump == null) {
+    pump = null;
+  }
+  if (this._pumps[name] != null) {
+    throw new Error(&#x27;Pump already exists&#x27;);
+  }
+  this._pumps[name] = pump != null ? pump : new Pump;
+  pumpId = this._id != null ? &#x22;&#x22; + this._id + &#x22;/&#x22; + name : name;
+  this._pumps[name].id(pumpId);
+  this._pumps[name].errorBuffer(this._errorBuffer);
+  return this._pumps[name];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+## Pump group
+You often need multiple pumps to complete an ETL task. Pump groups help starting multiple pump in
+one step, and also enables handling the event when every pump ended:
+```js
+sendMails = datapumps.group();
+sendMails.<span class="apidocCodeKeywordSpan">addPump</span>(&#x27;tickets&#x27;)
+...;
+sendMails.addPump(&#x27;reminderMailer&#x27;)
+...;
+sendMails
+.start()
+.whenFinished().then(function() {
+  console.log(&#x27;Tickets processed.&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.prototype.buffer" id="apidoc.element.datapumps.Group.prototype.buffer">
+        function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>buffer
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buffer = function (name) {
+  var result, _ref;
+  if (name == null) {
+    name = &#x27;output&#x27;;
+  }
+  try {
+    result = (_ref = this._exposedBuffers[name]) != null ? _ref : this._getBufferByPath(name);
+  } catch (_error) {
+
+  }
+  if (!result) {
+    throw new Error(&#x22;No such buffer: &#x22; + name);
+  }
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+datapumps = require(&#x27;datapumps&#x27;);
+(pump = new datapumps.Pump())
+  .from(&#x3c;put a nodejs stream or datapumps buffer here&#x3e;)
+  .run()
+```
+
+To access the output buffer, use the `.<span class="apidocCodeKeywordSpan">buffer</span>()` method, which returns a Buffer instance
+:
+```js
+buffer = pump.buffer(&#x27;output&#x27;);
+buffer = pump.buffer(); // equivalent with previous as the default buffer
+                        // of the pump is called &#x27;output&#x27;
+```
+
+Use the `.buffers()` method when you need to write data into multiple output buffers:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.prototype.constructor" id="apidoc.element.datapumps.Group.prototype.constructor">
+        function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Group() {
+  Group.__super__.constructor.call(this);
+  this._pumps = {};
+  this._exposedBuffers = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.prototype.debugMode" id="apidoc.element.datapumps.Group.prototype.debugMode">
+        function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>debugMode
+        <span class="apidocSignatureSpan">(_debug)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">debugMode = function (_debug) {
+  this._debug = _debug;
+  if (this._state !== Pump.STOPPED) {
+    throw new Error(&#x27;Cannot change debug mode after pump start&#x27;);
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.prototype.expose" id="apidoc.element.datapumps.Group.prototype.expose">
+        function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>expose
+        <span class="apidocSignatureSpan">(exposedName, bufferPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">expose = function (exposedName, bufferPath) {
+  if (this._exposedBuffers[exposedName] != null) {
+    throw new Error(&#x22;Already exposed a buffer with name &#x22; + exposedName);
+  }
+  return this._exposedBuffers[exposedName] = this._getBufferByPath(bufferPath);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.prototype.from" id="apidoc.element.datapumps.Group.prototype.from">
+        function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>from
+        <span class="apidocSignatureSpan">(buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">from = function (buffer) {
+  if (buffer == null) {
+    buffer = null;
+  }
+  if (this._inputPump == null) {
+    throw new Error(&#x27;Input pump is not set, use .inputPump to set it&#x27;);
+  }
+  this._inputPump.from(buffer);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+MongodbMixin = datapumps.mixin.MongodbMixin,
+ExcelWriterMixin = datapumps.mixin.ExcelWriterMixin,
+pump = new Pump();
+
+pump
+.mixin(MongodbMixin(&#x27;mongodb://localhost/marketing&#x27;))
+.useCollection(&#x27;Contact&#x27;)
+.<span class="apidocCodeKeywordSpan">from</span>(pump.find({ country: &#x22;US&#x22; }))
+
+.mixin(ExcelWriterMixin())
+.createWorkbook(&#x27;/tmp/ContactsInUs.xlsx&#x27;)
+.createWorksheet(&#x27;Contacts&#x27;)
+.writeHeaders([&#x27;Name&#x27;, &#x27;Email&#x27;])
+
+.process(function(contact) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.prototype.id" id="apidoc.element.datapumps.Group.prototype.id">
+        function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>id
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">id = function (id) {
+  var name, pump, _ref;
+  if (id == null) {
+    id = null;
+  }
+  if (id === null) {
+    return this._id;
+  }
+  this._id = id;
+  _ref = this._pumps;
+  for (name in _ref) {
+    pump = _ref[name];
+    pump.id(&#x22;&#x22; + this._id + &#x22;/&#x22; + name);
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.prototype.inputPump" id="apidoc.element.datapumps.Group.prototype.inputPump">
+        function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>inputPump
+        <span class="apidocSignatureSpan">(pumpName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inputPump = function (pumpName) {
+  if (pumpName == null) {
+    pumpName = null;
+  }
+  if (pumpName == null) {
+    return this._inputPump;
+  }
+  this._inputPump = this.pump(pumpName);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.prototype.mixin" id="apidoc.element.datapumps.Group.prototype.mixin">
+        function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>mixin
+        <span class="apidocSignatureSpan">(mixins)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mixin = function (mixins) {
+  if (this._inputPump == null) {
+    throw new Error(&#x27;Input pump is not set, use .inputPump to set it&#x27;);
+  }
+  this._inputPump.mixin(mixins);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+datapumps = require(&#x27;datapumps&#x27;),
+Pump = datapumps.Pump,
+MongodbMixin = datapumps.mixin.MongodbMixin,
+ExcelWriterMixin = datapumps.mixin.ExcelWriterMixin,
+pump = new Pump();
+
+pump
+.<span class="apidocCodeKeywordSpan">mixin</span>(MongodbMixin(&#x27;mongodb://localhost/marketing&#x27;))
+.useCollection(&#x27;Contact&#x27;)
+.from(pump.find({ country: &#x22;US&#x22; }))
+
+.mixin(ExcelWriterMixin())
+.createWorkbook(&#x27;/tmp/ContactsInUs.xlsx&#x27;)
+.createWorksheet(&#x27;Contacts&#x27;)
+.writeHeaders([&#x27;Name&#x27;, &#x27;Email&#x27;])
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.prototype.pause" id="apidoc.element.datapumps.Group.prototype.pause">
+        function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>pause
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pause = function () {
+  var name, pausePromises, pump, _ref;
+  if (this._state === Group.PAUSED) {
+    return;
+  }
+  if (this._state !== Group.STARTED) {
+    throw new Error(&#x27;Cannot .pause() a group that is not pumping&#x27;);
+  }
+  pausePromises = [];
+  _ref = this._pumps;
+  for (name in _ref) {
+    pump = _ref[name];
+    if (pump.isStarted()) {
+      pausePromises.push(pump.pause());
+    }
+  }
+  return Promise.all(pausePromises).then((function(_this) {
+    return function() {
+      return _this._state = Group.PAUSED;
+    };
+  })(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.prototype.process" id="apidoc.element.datapumps.Group.prototype.process">
+        function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>process
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">process = function () {
+  throw new Error(&#x27;Cannot call .process() on a group: data in a group is transformed by its pumps.&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+.from(pump.find({ country: &#x22;US&#x22; }))
+
+.mixin(ExcelWriterMixin())
+.createWorkbook(&#x27;/tmp/ContactsInUs.xlsx&#x27;)
+.createWorksheet(&#x27;Contacts&#x27;)
+.writeHeaders([&#x27;Name&#x27;, &#x27;Email&#x27;])
+
+.<span class="apidocCodeKeywordSpan">process</span>(function(contact) {
+  return pump.writeRow([ contact.name, contact.email ]);
+})
+.logErrorsToConsole()
+.run()
+  .then(function() {
+    console.log(&#x22;Done writing contacts to file&#x22;);
+  });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.prototype.pump" id="apidoc.element.datapumps.Group.prototype.pump">
+        function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>pump
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pump = function (name) {
+  if (this._pumps[name] == null) {
+    throw new Error(&#x22;Pump &#x22; + name + &#x22; does not exist&#x22;);
+  }
+  return this._pumps[name];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+etlProcess = datapumps.group()
+etlProcess
+  .addPump &#x27;notifier&#x27;, new Notifier
+    .from &#x3c;node stream or datapumps buffer&#x3e;
+
+etlProcess
+  .addPump &#x27;logger&#x27;
+    .from etlProcess.<span class="apidocCodeKeywordSpan">pump</span>(&#x27;notifier&#x27;).buffer()
+    .process (data) -&#x3e;
+      console.log &#x22;Email sent to #{data.name} (#{data.email})&#x22;
+```
+Please note that you cannot use `.process` method on a group.
+
+## Error handling
+Errors may occur while data is transfered between systems. Most of the time, you don&#x27;t want to stop
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.prototype.pumps" id="apidoc.element.datapumps.Group.prototype.pumps">
+        function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>pumps
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pumps = function () {
+  return this._pumps;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.prototype.resume" id="apidoc.element.datapumps.Group.prototype.resume">
+        function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>resume
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resume = function () {
+  var name, pump, _ref;
+  if (this._state !== Group.PAUSED) {
+    throw new Error(&#x27;Cannot .resume() a group that is not paused&#x27;);
+  }
+  this._state = Group.STARTED;
+  _ref = this._pumps;
+  for (name in _ref) {
+    pump = _ref[name];
+    pump.resume();
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.prototype.run" id="apidoc.element.datapumps.Group.prototype.run">
+        function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>run
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function () {
+  var result;
+  (result = this.runPumps())[&#x22;catch&#x22;](function(PumpingFailedError, e) {});
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ .createWorksheet(&#x27;Contacts&#x27;)
+ .writeHeaders([&#x27;Name&#x27;, &#x27;Email&#x27;])
+
+ .process(function(contact) {
+   return pump.writeRow([ contact.name, contact.email ]);
+ })
+ .logErrorsToConsole()
+ .<span class="apidocCodeKeywordSpan">run</span>()
+   .then(function() {
+     console.log(&#x22;Done writing contacts to file&#x22;);
+   });
+```
+
+Usage example with more details:
+* First, we create a pump and setup reading from mongodb
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.prototype.runPumps" id="apidoc.element.datapumps.Group.prototype.runPumps">
+        function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>runPumps
+        <span class="apidocSignatureSpan">(pumps)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">runPumps = function (pumps) {
+  var finishPromises, pumpName, _i, _len;
+  if (pumps == null) {
+    pumps = null;
+  }
+  if (pumps == null) {
+    pumps = this._getAllStoppedPumps();
+  }
+  if (typeof pumps === &#x27;string&#x27;) {
+    pumps = [pumps];
+  }
+  finishPromises = [];
+  for (_i = 0, _len = pumps.length; _i &#x3c; _len; _i++) {
+    pumpName = pumps[_i];
+    finishPromises.push(this.pump(pumpName).start().whenFinished());
+  }
+  return Promise.all(finishPromises);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Group.prototype.start" id="apidoc.element.datapumps.Group.prototype.start">
+        function <span class="apidocSignatureSpan">datapumps.Group.prototype.</span>start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function () {
+  var name, pump, _ref;
+  if (this._state !== Group.STOPPED) {
+    throw new Error(&#x27;Group already started&#x27;);
+  }
+  this._state = Group.STARTED;
+  this._registerErrorBufferEvents();
+  _ref = this._pumps;
+  for (name in _ref) {
+    pump = _ref[name];
+    pump.errorBuffer(this._errorBuffer);
+    pump.debugMode(this._debug);
+  }
+  this.run().then((function(_this) {
+    return function() {
+      return _this._endGroup();
+    };
+  })(this))[&#x22;catch&#x22;](function(PumpingFailedError, e) {});
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+The argument of `.process()` is a function that will be executed after the pump reads a data item.
+The function is executed in the context of the pump object, i.e. `this` refers to the pump itself. The
+function should return a Promise that fulfills when the data is processed (i.e. written into a buffer
+or stored elsewhere).
+
+### Start and end of pumping
+A pump is started by calling the `.<span class="apidocCodeKeywordSpan">start</span>()` method. The `end` event will be emitted when
+ the
+input stream or buffer ended and all output buffers became empty.
+```js
+pump.on(&#x27;end&#x27;, function() {
+  console.log(&#x27;Pumped everything, and all my output buffers are empty. Bye.&#x27;)
+})
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.datapumps.Pump" id="apidoc.module.datapumps.Pump">module datapumps.Pump</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.Pump" id="apidoc.element.datapumps.Pump.Pump">
+        function <span class="apidocSignatureSpan">datapumps.</span>Pump
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Pump() {
+  this._state = Pump.STOPPED;
+  this._from = null;
+  this._id = null;
+  this._errorBuffer = new Buffer;
+  this._debug = false;
+  this.buffers({
+    output: new Buffer
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   The `.logErrorsToConsole()` will log any error to the console, surprisingly. The pump will start
+   on calling `.run()`. It returns a [promise](https://promisesaplus.com/) that resolves when the pump finished.
+
+## Pump
+A pump reads data from its input buffer or stream and copies it to the output buffer by default:
+```js
+datapumps = require(&#x27;datapumps&#x27;);
+(pump = new datapumps.<span class="apidocCodeKeywordSpan">Pump</span>())
+  .from(&#x3c;put a nodejs stream or datapumps buffer here&#x3e;)
+  .run()
+```
+
+To access the output buffer, use the `.buffer()` method, which returns a Buffer instance:
+```js
+buffer = pump.buffer(&#x27;output&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.EventEmitter" id="apidoc.element.datapumps.Pump.EventEmitter">
+        function <span class="apidocSignatureSpan">datapumps.Pump.</span>EventEmitter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.init" id="apidoc.element.datapumps.Pump.init">
+        function <span class="apidocSignatureSpan">datapumps.Pump.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+  this.domain = null;
+  if (EventEmitter.usingDomains) {
+    // if there is an active domain, then attach to it.
+    domain = domain || require(&#x27;domain&#x27;);
+    if (domain.active &#x26;&#x26; !(this instanceof domain.Domain)) {
+      this.domain = domain.active;
+    }
+  }
+
+  if (!this._events || this._events === Object.getPrototypeOf(this)._events) {
+    this._events = new EventHandlers();
+    this._eventsCount = 0;
+  }
+
+  this._maxListeners = this._maxListeners || undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.listenerCount" id="apidoc.element.datapumps.Pump.listenerCount">
+        function <span class="apidocSignatureSpan">datapumps.Pump.</span>listenerCount
+        <span class="apidocSignatureSpan">(emitter, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenerCount = function (emitter, type) {
+  if (typeof emitter.listenerCount === &#x27;function&#x27;) {
+    return emitter.listenerCount(type);
+  } else {
+    return listenerCount.call(emitter, type);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.datapumps.Pump.prototype" id="apidoc.module.datapumps.Pump.prototype">module datapumps.Pump.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype._outputBufferEnded" id="apidoc.element.datapumps.Pump.prototype._outputBufferEnded">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>_outputBufferEnded
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_outputBufferEnded = function () {
+  var allEnded, buffer, name, _ref, _ref1;
+  allEnded = true;
+  _ref = this._buffers;
+  for (name in _ref) {
+    buffer = _ref[name];
+    if (!buffer.isEnded()) {
+      allEnded = false;
+    }
+  }
+  if (!allEnded) {
+    return;
+  }
+  this._state = Pump.ENDED;
+  if (this._debug) {
+    console.log(&#x22;&#x22; + ((new Date()).toISOString()) + &#x22; [&#x22; + ((_ref1 = this._id) != null ? _ref1 : &#x27;(root)&#x27;) + &#x22;] Pump ended&#x22;);
+  }
+  return this.emit(&#x27;end&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype._process" id="apidoc.element.datapumps.Pump.prototype._process">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>_process
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_process = function (data) {
+  return this.copy(data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype._pump" id="apidoc.element.datapumps.Pump.prototype._pump">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>_pump
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_pump = function () {
+  if (this._from.isEnded()) {
+    return this.sealOutputBuffers();
+  }
+  if (this._state === Pump.PAUSED || this._state === Pump.ABORTED) {
+    return;
+  }
+  return (this.currentRead = this._from.readAsync()).cancellable().then((function(_this) {
+    return function(data) {
+      var _ref;
+      _this.currentRead = null;
+      _this._processing = _this._process(data, _this);
+      if (!(((_ref = _this._processing) != null ? _ref.then : void 0) instanceof Function)) {
+        _this._processing = void 0;
+        throw new Error(&#x22;.process() did not return a Promise&#x22;);
+      }
+      _this._processing = Promise.resolve(_this._processing);
+      return _this._processing.cancellable();
+    };
+  })(this))[&#x22;catch&#x22;](Promise.CancellationError, function() {})[&#x22;catch&#x22;]((function(_this) {
+    return function(err) {
+      return _this.writeError(err);
+    };
+  })(this)).done((function(_this) {
+    return function() {
+      return _this._pump();
+    };
+  })(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype._registerErrorBufferEvents" id="apidoc.element.datapumps.Pump.prototype._registerErrorBufferEvents">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>_registerErrorBufferEvents
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_registerErrorBufferEvents = function () {
+  return this._errorBuffer.on(&#x27;full&#x27;, (function(_this) {
+    return function() {
+      if (_this._state === Pump.STARTED) {
+        return _this.abort().then(function() {
+          return _this.emit(&#x27;error&#x27;);
+        });
+      }
+    };
+  })(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.abort" id="apidoc.element.datapumps.Pump.prototype.abort">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>abort
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">abort = function () {
+  var _ref;
+  if (this._state === Pump.ABORTED) {
+    return;
+  }
+  if (this._state !== Pump.STARTED) {
+    throw new Error(&#x27;Cannot .abort() a pump that is not running&#x27;);
+  }
+  this._state = Pump.ABORTED;
+  if ((_ref = this._processing) != null ? _ref.isPending() : void 0) {
+    return this._processing.cancel()[&#x22;catch&#x22;](function(err) {});
+  } else {
+    return Promise.resolve();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.buffer" id="apidoc.element.datapumps.Pump.prototype.buffer">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>buffer
+        <span class="apidocSignatureSpan">(name, buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buffer = function (name, buffer) {
+  if (name == null) {
+    name = &#x27;output&#x27;;
+  }
+  if (buffer == null) {
+    buffer = null;
+  }
+  if (buffer === null) {
+    if (!this._buffers[name]) {
+      throw new Error(&#x22;No such buffer: &#x22; + name);
+    }
+    return this._buffers[name];
+  } else {
+    if (this._state === Pump.STARTED) {
+      throw new Error(&#x27;Cannot change output buffers after pumping has been started&#x27;);
+    }
+    if (!(buffer instanceof Buffer)) {
+      throw new Error(&#x27;buffer must be a datapumps.Buffer&#x27;);
+    }
+    this._buffers[name] = buffer;
+    return this;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+datapumps = require(&#x27;datapumps&#x27;);
+(pump = new datapumps.Pump())
+  .from(&#x3c;put a nodejs stream or datapumps buffer here&#x3e;)
+  .run()
+```
+
+To access the output buffer, use the `.<span class="apidocCodeKeywordSpan">buffer</span>()` method, which returns a Buffer instance
+:
+```js
+buffer = pump.buffer(&#x27;output&#x27;);
+buffer = pump.buffer(); // equivalent with previous as the default buffer
+                        // of the pump is called &#x27;output&#x27;
+```
+
+Use the `.buffers()` method when you need to write data into multiple output buffers:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.buffers" id="apidoc.element.datapumps.Pump.prototype.buffers">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>buffers
+        <span class="apidocSignatureSpan">(buffers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buffers = function (buffers) {
+  if (buffers == null) {
+    buffers = null;
+  }
+  if (buffers === null) {
+    return this._buffers;
+  }
+  if (this._state === Pump.STARTED) {
+    throw new Error(&#x27;Cannot change output buffers after pumping has been started&#x27;);
+  }
+  this._buffers = buffers;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+To access the output buffer, use the `.buffer()` method, which returns a Buffer instance:
+```js
+buffer = pump.buffer(&#x27;output&#x27;);
+buffer = pump.buffer(); // equivalent with previous as the default buffer
+                      // of the pump is called &#x27;output&#x27;
+```
+
+Use the `.<span class="apidocCodeKeywordSpan">buffers</span>()` method when you need to write data into multiple output buffers:
+```js
+ticketsPump
+.buffers({
+  openTickets: ticketsPump.createBuffer(),
+  closedTickets: ticketsPump.createBuffer(),
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.constructor" id="apidoc.element.datapumps.Pump.prototype.constructor">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Pump() {
+  this._state = Pump.STOPPED;
+  this._from = null;
+  this._id = null;
+  this._errorBuffer = new Buffer;
+  this._debug = false;
+  this.buffers({
+    output: new Buffer
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.copy" id="apidoc.element.datapumps.Pump.prototype.copy">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>copy
+        <span class="apidocSignatureSpan">(data, buffers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">copy = function (data, buffers) {
+  var buffer;
+  if (buffers == null) {
+    buffers = null;
+  }
+  if (buffers == null) {
+    buffers = [&#x27;output&#x27;];
+  }
+  if (typeof buffers === &#x27;string&#x27;) {
+    buffers = [buffers];
+  }
+  if (!Array.isArray(buffers)) {
+    throw new Error(&#x27;buffers must be an array of buffer names or a single buffers name&#x27;);
+  }
+  if (buffers.length === 1) {
+    return this.buffer(buffers[0]).writeAsync(data);
+  } else {
+    return Promise.all((function() {
+      var _i, _len, _results;
+      _results = [];
+      for (_i = 0, _len = buffers.length; _i &#x3c; _len; _i++) {
+        buffer = buffers[_i];
+        _results.push(this.buffer(buffer).writeAsync(data));
+      }
+      return _results;
+    }).call(this));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.createBuffer" id="apidoc.element.datapumps.Pump.prototype.createBuffer">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>createBuffer
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createBuffer = function (options) {
+  if (options == null) {
+    options = {};
+  }
+  return new Buffer(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+                      // of the pump is called &#x27;output&#x27;
+```
+
+Use the `.buffers()` method when you need to write data into multiple output buffers:
+```js
+ticketsPump
+.buffers({
+  openTickets: ticketsPump.<span class="apidocCodeKeywordSpan">createBuffer</span>(),
+  closedTickets: ticketsPump.createBuffer(),
+});
+
+reminderMailer = new datapumps.Pump()
+reminderMailer
+.from(ticketPump.buffer(&#x27;openTickets&#x27;))
+...
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.debug" id="apidoc.element.datapumps.Pump.prototype.debug">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>debug
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">debug = function () {
+  this.debugMode(true);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.debugMode" id="apidoc.element.datapumps.Pump.prototype.debugMode">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>debugMode
+        <span class="apidocSignatureSpan">(_debug)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">debugMode = function (_debug) {
+  this._debug = _debug;
+  if (this._state !== Pump.STOPPED) {
+    throw new Error(&#x27;Cannot change debug mode after pump start&#x27;);
+  }
+  if (this._debug) {
+    this.mixin(BufferDebugMixin);
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.errorBuffer" id="apidoc.element.datapumps.Pump.prototype.errorBuffer">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>errorBuffer
+        <span class="apidocSignatureSpan">(buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">errorBuffer = function (buffer) {
+  if (buffer == null) {
+    buffer = null;
+  }
+  if (buffer === null) {
+    return this._errorBuffer;
+  }
+  this._errorBuffer = buffer;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    console.log &#x22;Email sent to #{data.name} (#{data.email})&#x22;
+```
+Please note that you cannot use `.process` method on a group.
+
+## Error handling
+Errors may occur while data is transfered between systems. Most of the time, you don&#x27;t want to stop
+on the first error but complete the transfer and re-run after fixing problems. Therefore
+the pump group has an error buffer (`.<span class="apidocCodeKeywordSpan">errorBuffer</span>()`) which can hold ten error messages
+ by default.
+When the error buffer fills up, `error` event is triggered and `.whenFinised()` promise is rejected:
+```js
+group
+.start()
+.whenFinished()
+  .then(function() {
+    if (!group.errorBuffer().isEmpty()) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.from" id="apidoc.element.datapumps.Pump.prototype.from">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>from
+        <span class="apidocSignatureSpan">(buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">from = function (buffer) {
+  if (buffer == null) {
+    buffer = null;
+  }
+  if (buffer === null) {
+    return this._from;
+  }
+  if (this._state === Pump.STARTED) {
+    throw new Error(&#x27;Cannot change source buffer after pumping has been started&#x27;);
+  }
+  if (buffer instanceof Buffer) {
+    this._from = buffer;
+  } else if (buffer instanceof Pump) {
+    this._from = buffer.buffer();
+  } else if (buffer instanceof require(&#x27;stream&#x27;)) {
+    this._from = new Buffer({
+      size: 1000
+    });
+    buffer.on(&#x27;data&#x27;, (function(_this) {
+      return function(data) {
+        return _this._from.write(data);
+      };
+    })(this));
+    buffer.on(&#x27;end&#x27;, (function(_this) {
+      return function() {
+        return _this._from.seal();
+      };
+    })(this));
+    buffer.on(&#x27;error&#x27;, (function(_this) {
+      return function(err) {
+        return _this.writeError(err);
+      };
+    })(this));
+    this._from.on(&#x27;full&#x27;, function() {
+      return buffer.pause();
+    });
+    this._from.on(&#x27;release&#x27;, function() {
+      return buffer.resume();
+    });
+  } else if (buffer instanceof Array) {
+    this._from = new Buffer({
+      content: buffer.slice(0),
+      sealed: true
+    });
+  } else {
+    throw new Error(&#x27;Argument must be datapumps.Buffer or stream&#x27;);
+  }
+  this._from.on(&#x27;end&#x27;, (function(_this) {
+    return function() {
+      return _this.sourceEnded();
+    };
+  })(this));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+MongodbMixin = datapumps.mixin.MongodbMixin,
+ExcelWriterMixin = datapumps.mixin.ExcelWriterMixin,
+pump = new Pump();
+
+pump
+.mixin(MongodbMixin(&#x27;mongodb://localhost/marketing&#x27;))
+.useCollection(&#x27;Contact&#x27;)
+.<span class="apidocCodeKeywordSpan">from</span>(pump.find({ country: &#x22;US&#x22; }))
+
+.mixin(ExcelWriterMixin())
+.createWorkbook(&#x27;/tmp/ContactsInUs.xlsx&#x27;)
+.createWorksheet(&#x27;Contacts&#x27;)
+.writeHeaders([&#x27;Name&#x27;, &#x27;Email&#x27;])
+
+.process(function(contact) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.id" id="apidoc.element.datapumps.Pump.prototype.id">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>id
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">id = function (id) {
+  if (id == null) {
+    id = null;
+  }
+  if (id === null) {
+    return this._id;
+  }
+  this._id = id;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.isEnded" id="apidoc.element.datapumps.Pump.prototype.isEnded">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>isEnded
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isEnded = function () {
+  return this._state === Pump.ENDED;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.isPaused" id="apidoc.element.datapumps.Pump.prototype.isPaused">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>isPaused
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isPaused = function () {
+  return this._state === Pump.PAUSED;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.isStarted" id="apidoc.element.datapumps.Pump.prototype.isStarted">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>isStarted
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isStarted = function () {
+  return this._state === Pump.STARTED;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.isStopped" id="apidoc.element.datapumps.Pump.prototype.isStopped">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>isStopped
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isStopped = function () {
+  return this._state === Pump.STOPPED;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.logErrorsToConsole" id="apidoc.element.datapumps.Pump.prototype.logErrorsToConsole">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>logErrorsToConsole
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">logErrorsToConsole = function () {
+  this.errorBuffer().on(&#x27;write&#x27;, (function(_this) {
+    return function(errorRecord) {
+      var name, _ref, _ref1;
+      name = (_ref = errorRecord.pump) != null ? _ref : &#x27;(root)&#x27;;
+      if (_this._debug) {
+        console.log(&#x22;Error in pump &#x22; + name + &#x22;:&#x22;);
+        return console.log((_ref1 = errorRecord.error.stack) != null ? _ref1 : errorRecord.error);
+      } else {
+        return console.log(&#x22;Error in pump &#x22; + name + &#x22;: &#x22; + errorRecord.error);
+      }
+    };
+  })(this));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  .createWorkbook(&#x27;/tmp/ContactsInUs.xlsx&#x27;)
+  .createWorksheet(&#x27;Contacts&#x27;)
+  .writeHeaders([&#x27;Name&#x27;, &#x27;Email&#x27;])
+
+  .process(function(contact) {
+    return pump.writeRow([ contact.name, contact.email ]);
+  })
+  .<span class="apidocCodeKeywordSpan">logErrorsToConsole</span>()
+  .run()
+    .then(function() {
+      console.log(&#x22;Done writing contacts to file&#x22;);
+    });
+```
+
+Usage example with more details:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.mixin" id="apidoc.element.datapumps.Pump.prototype.mixin">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>mixin
+        <span class="apidocSignatureSpan">(mixins)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mixin = function (mixins) {
+  var mixin, _i, _len;
+  mixins = Array.isArray(mixins) ? mixins : [mixins];
+  for (_i = 0, _len = mixins.length; _i &#x3c; _len; _i++) {
+    mixin = mixins[_i];
+    mixin(this);
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+datapumps = require(&#x27;datapumps&#x27;),
+Pump = datapumps.Pump,
+MongodbMixin = datapumps.mixin.MongodbMixin,
+ExcelWriterMixin = datapumps.mixin.ExcelWriterMixin,
+pump = new Pump();
+
+pump
+.<span class="apidocCodeKeywordSpan">mixin</span>(MongodbMixin(&#x27;mongodb://localhost/marketing&#x27;))
+.useCollection(&#x27;Contact&#x27;)
+.from(pump.find({ country: &#x22;US&#x22; }))
+
+.mixin(ExcelWriterMixin())
+.createWorkbook(&#x27;/tmp/ContactsInUs.xlsx&#x27;)
+.createWorksheet(&#x27;Contacts&#x27;)
+.writeHeaders([&#x27;Name&#x27;, &#x27;Email&#x27;])
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.pause" id="apidoc.element.datapumps.Pump.prototype.pause">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>pause
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pause = function () {
+  var _ref;
+  if (this._state === Pump.PAUSED) {
+    return;
+  }
+  if (this._state !== Pump.STARTED) {
+    throw new Error(&#x27;Cannot .pause() a pump that is not running&#x27;);
+  }
+  if ((_ref = this._processing) != null ? _ref.isPending() : void 0) {
+    return this._processing.then((function(_this) {
+      return function() {
+        return _this._state = Pump.PAUSED;
+      };
+    })(this));
+  } else {
+    this._state = Pump.PAUSED;
+    return Promise.resolve();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.process" id="apidoc.element.datapumps.Pump.prototype.process">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>process
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">process = function (fn) {
+  if (typeof fn !== &#x27;function&#x27;) {
+    throw new Error(&#x27;.process() argument must be a Promise returning function &#x27;);
+  }
+  this._process = fn;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+.from(pump.find({ country: &#x22;US&#x22; }))
+
+.mixin(ExcelWriterMixin())
+.createWorkbook(&#x27;/tmp/ContactsInUs.xlsx&#x27;)
+.createWorksheet(&#x27;Contacts&#x27;)
+.writeHeaders([&#x27;Name&#x27;, &#x27;Email&#x27;])
+
+.<span class="apidocCodeKeywordSpan">process</span>(function(contact) {
+  return pump.writeRow([ contact.name, contact.email ]);
+})
+.logErrorsToConsole()
+.run()
+  .then(function() {
+    console.log(&#x22;Done writing contacts to file&#x22;);
+  });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.resume" id="apidoc.element.datapumps.Pump.prototype.resume">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>resume
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resume = function () {
+  if (this._state !== Pump.PAUSED) {
+    throw new Error(&#x27;Cannot .resume() a pump that is not paused&#x27;);
+  }
+  this._state = Pump.STARTED;
+  this._pump();
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.run" id="apidoc.element.datapumps.Pump.prototype.run">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>run
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function () {
+  return this.start().whenFinished();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ .createWorksheet(&#x27;Contacts&#x27;)
+ .writeHeaders([&#x27;Name&#x27;, &#x27;Email&#x27;])
+
+ .process(function(contact) {
+   return pump.writeRow([ contact.name, contact.email ]);
+ })
+ .logErrorsToConsole()
+ .<span class="apidocCodeKeywordSpan">run</span>()
+   .then(function() {
+     console.log(&#x22;Done writing contacts to file&#x22;);
+   });
+```
+
+Usage example with more details:
+* First, we create a pump and setup reading from mongodb
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.sealOutputBuffers" id="apidoc.element.datapumps.Pump.prototype.sealOutputBuffers">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>sealOutputBuffers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sealOutputBuffers = function () {
+  var buffer, name, _ref, _results;
+  _ref = this._buffers;
+  _results = [];
+  for (name in _ref) {
+    buffer = _ref[name];
+    if (!buffer.isSealed()) {
+      _results.push(buffer.seal());
+    } else {
+      _results.push(void 0);
+    }
+  }
+  return _results;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.sourceEnded" id="apidoc.element.datapumps.Pump.prototype.sourceEnded">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>sourceEnded
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sourceEnded = function () {
+  if (this.currentRead) {
+    return this.currentRead.cancel();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.start" id="apidoc.element.datapumps.Pump.prototype.start">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function () {
+  var buffer, name, _ref, _ref1;
+  if (!this._from) {
+    throw new Error(&#x27;Source is not configured&#x27;);
+  }
+  if (this._state !== Pump.STOPPED) {
+    throw new Error(&#x27;Pump is already started&#x27;);
+  }
+  if (this._debug) {
+    console.log(&#x22;&#x22; + ((new Date()).toISOString()) + &#x22; [&#x22; + ((_ref = this._id) != null ? _ref : &#x27;(root)&#x27;) + &#x22;] Pump started&#x22;);
+  }
+  this._state = Pump.STARTED;
+  this._registerErrorBufferEvents();
+  _ref1 = this._buffers;
+  for (name in _ref1) {
+    buffer = _ref1[name];
+    buffer.on(&#x27;end&#x27;, this._outputBufferEnded.bind(this));
+  }
+  this._pump();
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+The argument of `.process()` is a function that will be executed after the pump reads a data item.
+The function is executed in the context of the pump object, i.e. `this` refers to the pump itself. The
+function should return a Promise that fulfills when the data is processed (i.e. written into a buffer
+or stored elsewhere).
+
+### Start and end of pumping
+A pump is started by calling the `.<span class="apidocCodeKeywordSpan">start</span>()` method. The `end` event will be emitted when
+ the
+input stream or buffer ended and all output buffers became empty.
+```js
+pump.on(&#x27;end&#x27;, function() {
+  console.log(&#x27;Pumped everything, and all my output buffers are empty. Bye.&#x27;)
+})
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.to" id="apidoc.element.datapumps.Pump.prototype.to">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>to
+        <span class="apidocSignatureSpan">(pump, bufferName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">to = function (pump, bufferName) {
+  pump.from(this.buffer(bufferName));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.whenFinished" id="apidoc.element.datapumps.Pump.prototype.whenFinished">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>whenFinished
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">whenFinished = function () {
+  if (this.isEnded()) {
+    return Promise.resolve();
+  }
+  return new Promise((function(_this) {
+    return function(resolve, reject) {
+      _this.on(&#x27;end&#x27;, function() {
+        return resolve();
+      });
+      return _this.on(&#x27;error&#x27;, function() {
+        return reject(new PumpingFailedError());
+      });
+    };
+  })(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+sendMails = datapumps.group();
+sendMails.addPump(&#x27;tickets&#x27;)
+  ...;
+sendMails.addPump(&#x27;reminderMailer&#x27;)
+  ...;
+sendMails
+  .start()
+  .<span class="apidocCodeKeywordSpan">whenFinished</span>().then(function() {
+    console.log(&#x27;Tickets processed.&#x27;);
+  });
+```
+The `.addPump()` method creates a new pump with given name and returns it for configuration.
+`.start()` will start all pumps in the group, while `.whenFinished()` returns a Promise the fulfills
+when every pump ended (Note: `end` event is also emitted).
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.Pump.prototype.writeError" id="apidoc.element.datapumps.Pump.prototype.writeError">
+        function <span class="apidocSignatureSpan">datapumps.Pump.prototype.</span>writeError
+        <span class="apidocSignatureSpan">(err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeError = function (err) {
+  if (this._errorBuffer.isFull()) {
+    return;
+  }
+  this._errorBuffer.write({
+    error: err,
+    pump: this._id
+  });
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.datapumps.PumpingFailedError" id="apidoc.module.datapumps.PumpingFailedError">module datapumps.PumpingFailedError</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.PumpingFailedError.PumpingFailedError" id="apidoc.element.datapumps.PumpingFailedError.PumpingFailedError">
+        function <span class="apidocSignatureSpan">datapumps.</span>PumpingFailedError
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PumpingFailedError(message) {
+  this.message = message != null ? message : &#x27;Pumping failed. See .errorBuffer() contents for error messages&#x27;;
+  PumpingFailedError.__super__.constructor.call(this, this.message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.PumpingFailedError.captureStackTrace" id="apidoc.element.datapumps.PumpingFailedError.captureStackTrace">
+        function <span class="apidocSignatureSpan">datapumps.PumpingFailedError.</span>captureStackTrace
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function captureStackTrace() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.datapumps.PumpingFailedError.prototype" id="apidoc.module.datapumps.PumpingFailedError.prototype">module datapumps.PumpingFailedError.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.PumpingFailedError.prototype.constructor" id="apidoc.element.datapumps.PumpingFailedError.prototype.constructor">
+        function <span class="apidocSignatureSpan">datapumps.PumpingFailedError.prototype.</span>constructor
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PumpingFailedError(message) {
+  this.message = message != null ? message : &#x27;Pumping failed. See .errorBuffer() contents for error messages&#x27;;
+  PumpingFailedError.__super__.constructor.call(this, this.message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.datapumps.mixin" id="apidoc.module.datapumps.mixin">module datapumps.mixin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.mixin.BatchMixin" id="apidoc.element.datapumps.mixin.BatchMixin">
+        function <span class="apidocSignatureSpan">datapumps.mixin.</span>BatchMixin
+        <span class="apidocSignatureSpan">(target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">BatchMixin = function (target) {
+  var pumpMethod;
+  target._batchSize = 100;
+  target._batch = [];
+  target.batchSize = function(size) {
+    if (size == null) {
+      return this._batchSize;
+    }
+    if (size &#x3c;= 1) {
+      throw new Error(&#x22;Invalid batch size: &#x22; + size);
+    }
+    this._batchSize = size;
+    return this;
+  };
+  target.processBatch = function(fn) {
+    if (typeof fn !== &#x27;function&#x27;) {
+      throw new Error(&#x27;processBatch argument must be a function&#x27;);
+    }
+    this._processBatch = fn;
+    return this;
+  };
+  target._process = function(data) {
+    var result;
+    this._batch.push(data);
+    if (this._batch.length &#x3e;= this._batchSize) {
+      result = this._processBatch(this._batch);
+      this._batch = [];
+      return result;
+    } else {
+      return Promise.resolve();
+    }
+  };
+  pumpMethod = target._pump;
+  return target._pump = function() {
+    if (this._from.isEnded()) {
+      if (this._batch.length &#x3e; 0) {
+        Promise.resolve(this._processBatch(this._batch))[&#x22;catch&#x22;]((function(_this) {
+          return function(err) {
+            return _this.writeError(err);
+          };
+        })(this)).then((function(_this) {
+          return function() {
+            return _this.sealOutputBuffers();
+          };
+        })(this));
+      } else {
+        this.sealOutputBuffers();
+      }
+      this._batch = [];
+      return;
+    }
+    return pumpMethod.apply(target, []);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.mixin.BufferDebugMixin" id="apidoc.element.datapumps.mixin.BufferDebugMixin">
+        function <span class="apidocSignatureSpan">datapumps.mixin.</span>BufferDebugMixin
+        <span class="apidocSignatureSpan">(pump)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">BufferDebugMixin = function (pump) {
+  var clearBufferStats, collectBuffers, delay, dumpStats, dumpStatsIfNotEnded, hadTraffic, listenToBuffersEvents, monitorBuffers
+, _bufferStats, _start;
+  if (&#x27;_bufferDebugMixin&#x27; in pump) {
+    return;
+  }
+  _start = pump.start;
+  _bufferStats = {};
+  pump._bufferDebugMixin = {
+    version: 1
+  };
+  pump.start = function() {
+    _start.call(pump);
+    if (this._debug !== true) {
+      return this;
+    }
+    collectBuffers();
+    listenToBuffersEvents();
+    monitorBuffers();
+    pump.whenFinished().then(function() {
+      return dumpStats();
+    });
+    return this;
+  };
+  collectBuffers = function() {
+    var buffer, name, _ref;
+    _bufferStats = {
+      input: {
+        buffer: pump.from()
+      }
+    };
+    _ref = pump.buffers();
+    for (name in _ref) {
+      buffer = _ref[name];
+      _bufferStats[name] = {
+        buffer: buffer
+      };
+    }
+    return clearBufferStats();
+  };
+  clearBufferStats = function() {
+    var buffer, name, _results;
+    _results = [];
+    for (name in _bufferStats) {
+      buffer = _bufferStats[name];
+      buffer.releases = 0;
+      _results.push(buffer.writes = 0);
+    }
+    return _results;
+  };
+  listenToBuffersEvents = function() {
+    var buffer, name, _results;
+    _results = [];
+    for (name in _bufferStats) {
+      buffer = _bufferStats[name];
+      _results.push((function(buffer) {
+        if (!buffer.buffer) {
+          return;
+        }
+        buffer.buffer.on(&#x27;write&#x27;, function() {
+          return buffer.writes++;
+        });
+        return buffer.buffer.on(&#x27;release&#x27;, function() {
+          return buffer.releases++;
+        });
+      })(buffer));
+    }
+    return _results;
+  };
+  monitorBuffers = function() {
+    return delay(1000, function() {
+      dumpStatsIfNotEnded();
+      clearBufferStats();
+      if (!pump.isEnded()) {
+        return monitorBuffers();
+      }
+    });
+  };
+  delay = function(ms, func) {
+    return setTimeout(func, ms);
+  };
+  dumpStatsIfNotEnded = function() {
+    if (pump.isEnded()) {
+      return;
+    }
+    return dumpStats();
+  };
+  dumpStats = function() {
+    var buffer, name, _ref;
+    if (!hadTraffic()) {
+      return;
+    }
+    process.stdout.write(&#x22;&#x22; + ((new Date()).toISOString()) + &#x22; [&#x22; + ((_ref = pump.id()) != null ? _ref : &#x27;(root)&#x27;) + &#x22;] &#x22;);
+    for (name in _bufferStats) {
+      buffer = _bufferStats[name];
+      process.stdout.write(&#x22;&#x22; + name + &#x22;: &#x22; + (buffer.buffer.getContent().length) + &#x22; items, &#x22; + buffer.writes + &#x22; in, &#x22; + buffer
+.releases + &#x22; out | &#x22;);
+    }
+    return process.stdout.write(&#x22;\n&#x22;);
+  };
+  return hadTraffic = function() {
+    var buffer, name;
+    for (name in _bufferStats) {
+      buffer = _bufferStats[name];
+      if (buffer.releases &#x3e; 0 || buffer.writes &#x3e; 0) {
+        return true;
+      }
+    }
+    return false;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.mixin.CsvWriterMixin" id="apidoc.element.datapumps.mixin.CsvWriterMixin">
+        function <span class="apidocSignatureSpan">datapumps.mixin.</span>CsvWriterMixin
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">CsvWriterMixin = function (options) {
+  if (!(options != null ? options.path : void 0)) {
+    throw new Error(&#x27;path option is required.&#x27;);
+  }
+  return function(target) {
+    target.writeRow = function(row) {
+      return target._csv.writer.writeAsync(row);
+    };
+    target._csv = options;
+    target._csv.writer = Promise.promisifyAll(csv.createWriteStream());
+    target._csv.writer.pipe(fs.createWriteStream(target._csv.path, {
+      encoding: &#x27;utf8&#x27;
+    }));
+    if (target._csv.headers != null) {
+      target.writeRow(target._csv.headers);
+    }
+    return target.on(&#x27;end&#x27;, function() {
+      return target._csv.writer.write(null);
+    });
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.mixin.ExcelReaderMixin" id="apidoc.element.datapumps.mixin.ExcelReaderMixin">
+        function <span class="apidocSignatureSpan">datapumps.mixin.</span>ExcelReaderMixin
+        <span class="apidocSignatureSpan">(_arg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ExcelReaderMixin = function (_arg) {
+  var columnMapping, path, worksheet;
+  worksheet = _arg.worksheet, columnMapping = _arg.columnMapping, path = _arg.path;
+  return function(target) {
+    var buffer, content, data, mapColumnNames, workbook, _i, _len, _ref2;
+    if (path != null) {
+      workbook = readFile(path);
+      worksheet = workbook.Sheets[worksheet];
+    }
+    if (worksheet == null) {
+      throw new Error(&#x27;worksheet property is required for ExcelReaderMixin&#x27;);
+    }
+    target._excel = {
+      worksheet: worksheet,
+      columnMapping: columnMapping
+    };
+    mapColumnNames = function(data) {
+      var from, result, to;
+      result = {};
+      for (from in columnMapping) {
+        to = columnMapping[from];
+        result[to] = data[from];
+      }
+      return result;
+    };
+    content = [];
+    if (columnMapping) {
+      _ref2 = convertSheetToJson(worksheet);
+      for (_i = 0, _len = _ref2.length; _i &#x3c; _len; _i++) {
+        data = _ref2[_i];
+        content.push(mapColumnNames(data));
+      }
+    } else {
+      content = convertSheetToJson(worksheet);
+    }
+    buffer = new Buffer({
+      content: content
+    });
+    target.from(buffer);
+    return buffer.seal();
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.mixin.ExcelWriterMixin" id="apidoc.element.datapumps.mixin.ExcelWriterMixin">
+        function <span class="apidocSignatureSpan">datapumps.mixin.</span>ExcelWriterMixin
+        <span class="apidocSignatureSpan">(onMixin)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ExcelWriterMixin = function (onMixin) {
+  return function(target) {
+    target._excel = {
+      columnTypes: [],
+      path: null
+    };
+    target.createWorkbook = function(path) {
+      if (this._excel.workbook != null) {
+        throw new Error(&#x27;Workbook already created&#x27;);
+      }
+      this.workbook(new excel4node.WorkBook());
+      this._excel.path = path;
+      this.on(&#x27;end&#x27;, (function(_this) {
+        return function() {
+          return _this._excel.workbook.write(_this._excel.path);
+        };
+      })(this));
+      this._excel.workbook;
+      return this;
+    };
+    target.workbook = function(workbook) {
+      if (workbook == null) {
+        workbook = null;
+      }
+      if (workbook === null) {
+        return this._excel.workbook;
+      }
+      this._excel.workbook = workbook;
+      this._excel.boldStyle = this._excel.workbook.Style();
+      this._excel.boldStyle.Font.Bold();
+      return this;
+    };
+    target.createWorksheet = function(name) {
+      if (this._excel.workbook == null) {
+        throw new Error(&#x27;Use createWorkbook before creating worksheet&#x27;);
+      }
+      this._excel.worksheet = this._excel.workbook.WorkSheet(name);
+      this._excel.currentRow = 1;
+      return this;
+    };
+    target.currentWorksheet = function() {
+      return this._excel.worksheet;
+    };
+    target.writeHeaders = function(headers, types) {
+      var header, index, _i, _len, _ref;
+      if (types == null) {
+        types = [];
+      }
+      if (this._excel.worksheet == null) {
+        throw new Error(&#x27;Use createWorksheet before writing headers&#x27;);
+      }
+      if (this._excel.currentRow !== 1) {
+        throw new Error(&#x27;Use writeHeaders before writing any rows to the worksheet&#x27;);
+      }
+      for (index = _i = 0, _len = headers.length; _i &#x3c; _len; index = ++_i) {
+        header = headers[index];
+        this._writeHeader(index, header);
+        this.columnType(index, (_ref = types[index]) != null ? _ref : &#x27;String&#x27;);
+      }
+      this._excel.currentRow = 2;
+      return this;
+    };
+    target._writeHeader = function(index, header) {
+      this._excel.worksheet.Cell(1, index + 1).String(header).Style(this._excel.boldStyle);
+      return this;
+    };
+    target.columnType = function(index, type) {
+      if (type == null) {
+        type = null;
+      }
+      if (type === null) {
+        return this._excel.columnTypes[index];
+      }
+      if ([&#x27;String&#x27;, &#x27;Number&#x27;, &#x27;Formula&#x27;].indexOf(type) === -1) {
+        throw new Error(&#x22;Invalid column type &#x27;&#x22; + type + &#x22;&#x27;. Only String, Number or Formula is allowed&#x22;);
+      }
+      this._excel.columnTypes[index] = type;
+      return this;
+    };
+    target.writeRow = function(columns) {
+      var cell, index, value, _i, _len, _ref;
+      if (this._excel.worksheet == null) {
+        throw new Error(&#x27;Use createWorksheet before writing rows&#x27;);
+      }
+      for (index = _i = 0, _len = columns.length; _i &#x3c; _len; index = ++_i) {
+        value = columns[index];
+        if (value === null || value === void 0) {
+          continue;
+        }
+        cell = this._excel.worksheet.Cell(this._excel.currentRow, index + 1);
+        cell[(_ref = this._excel.columnTypes[index]) != null ? _ref : &#x27;String&#x27;](value);
+      }
+      this._excel.currentRow++;
+      return Promise.resolve();
+    };
+    if (onMixin) {
+      return onMixin.apply(target, [target]);
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.mixin.MergeMixin" id="apidoc.element.datapumps.mixin.MergeMixin">
+        function <span class="apidocSignatureSpan">datapumps.mixin.</span>MergeMixin
+        <span class="apidocSignatureSpan">(pump)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">MergeMixin = function (pump) {
+  pump.from(new Buffer());
+  pump._fromBuffers = [];
+  return pump.from = function(buffer) {
+    var helperPump, sourceBuffer;
+    if (buffer == null) {
+      buffer = null;
+    }
+    if (buffer === null) {
+      return this._from;
+    }
+    if (this._state === Pump.STARTED) {
+      throw new Error(&#x27;Cannot change source buffer after pumping has been started&#x27;);
+    }
+    if (buffer instanceof Buffer) {
+      sourceBuffer = buffer;
+    } else if (buffer instanceof Pump) {
+      sourceBuffer = buffer.buffer();
+    } else if (buffer instanceof require(&#x27;stream&#x27;)) {
+      sourceBuffer = new Buffer({
+        size: 1000
+      });
+      buffer.on(&#x27;data&#x27;, (function(_this) {
+        return function(data) {
+          return sourceBuffer.write(data);
+        };
+      })(this));
+      buffer.on(&#x27;end&#x27;, (function(_this) {
+        return function() {
+          return sourceBuffer.seal();
+        };
+      })(this));
+      buffer.on(&#x27;error&#x27;, (function(_this) {
+        return function(err) {
+          return _this.writeError(err);
+        };
+      })(this));
+      sourceBuffer.on(&#x27;full&#x27;, function() {
+        return buffer.pause();
+      });
+      sourceBuffer.on(&#x27;release&#x27;, function() {
+        return buffer.resume();
+      });
+    } else {
+      throw new Error(&#x27;Argument must be datapumps.Buffer or stream&#x27;);
+    }
+    this._fromBuffers.push(sourceBuffer);
+    (helperPump = new MergeHelperPump()).from(sourceBuffer).buffer(&#x27;output&#x27;, this._from).process(function(data) {
+      return this.copy(data);
+    });
+    helperPump.on(&#x27;sealOutput&#x27;, function() {
+      var allEnded, _i, _len, _ref;
+      allEnded = true;
+      _ref = pump._fromBuffers;
+      for (_i = 0, _len = _ref.length; _i &#x3c; _len; _i++) {
+        buffer = _ref[_i];
+        if (!buffer.isEnded()) {
+          allEnded = false;
+        }
+      }
+      if (!allEnded) {
+        return;
+      }
+      if (!pump._from.isSealed()) {
+        return pump._from.seal();
+      }
+    }).start();
+    return this;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.mixin.MongodbMixin" id="apidoc.element.datapumps.mixin.MongodbMixin">
+        function <span class="apidocSignatureSpan">datapumps.mixin.</span>MongodbMixin
+        <span class="apidocSignatureSpan">(db)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">MongodbMixin = function (db) {
+  return function(target) {
+    var name, _i, _len;
+    target._mongo = {
+      db: db
+    };
+    if (typeof db === &#x27;string&#x27;) {
+      (target._mongo.whenConnected = mongo.MongoClient.connectAsync(db)).then(function(db) {
+        var _ref, _ref1;
+        target._mongo.db = db;
+        target.whenFinished().then(function() {
+          return target._mongo.db.close();
+        });
+        if (((_ref = target._mongo) != null ? (_ref1 = _ref.collection) != null ? _ref1._datapumpsMixinName : void 0 : void 0) !=
+null) {
+          return target._mongo.collection = db.collection(target._mongo.collection._datapumpsMixinName);
+        }
+      });
+    }
+    for (_i = 0, _len = _wrappedMethods.length; _i &#x3c; _len; _i++) {
+      name = _wrappedMethods[_i];
+      _wrapMethod(target, name);
+    }
+    _wrapFind(target);
+    target.setGlobalDefaultMaxBsonSize = function(size) {
+      require(&#x27;mongodb&#x27;).Connection.DEFAULT_MAX_BSON_SIZE = size;
+      require(&#x27;mongodb&#x27;).Connection.DEFAULT_MAX_MESSAGE_SIZE = size;
+      return this;
+    };
+    target.db = function() {
+      return this._mongo.db;
+    };
+    target.useCollection = function(name) {
+      var _j, _len1, _ref;
+      if ((target._mongo.whenConnected != null) &#x26;&#x26; ((_ref = target._mongo) != null ? _ref.whenConnected.isPending() : void 0)) {
+        this._mongo.collection = {
+          _datapumpsMixinName: name
+        };
+        for (_j = 0, _len1 = _wrappedMethods.length; _j &#x3c; _len1; _j++) {
+          name = _wrappedMethods[_j];
+          _deferCollectionMethod(this._mongo.collection, name + &#x27;Async&#x27;, this);
+        }
+        _deferFind(this._mongo.collection, this);
+      } else {
+        this._mongo.collection = this._mongo.db.collection(name);
+      }
+      return this;
+    };
+    return target.collection = function(name) {
+      var _ref;
+      if ((_ref = target._mongo) != null ? _ref.whenConnected.isPending() : void 0) {
+        throw new Error(&#x27;Not yet connected to mongo&#x27;);
+      }
+      return this._mongo.db.collection(name);
+    };
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.mixin.MysqlMixin" id="apidoc.element.datapumps.mixin.MysqlMixin">
+        function <span class="apidocSignatureSpan">datapumps.mixin.</span>MysqlMixin
+        <span class="apidocSignatureSpan">(connection)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">MysqlMixin = function (connection) {
+  if ((connection == null) || typeof (connection != null ? connection.query : void 0) !== &#x27;function&#x27;) {
+    throw new Error(&#x27;Mysql mixin requires connection to be given&#x27;);
+  }
+  return function(target) {
+    target._mysql = {
+      connection: connection,
+      query: Promise.promisify(connection.query, connection)
+    };
+    target.query = function() {
+      var args, query;
+      query = arguments[0], args = 2 &#x3c;= arguments.length ? __slice.call(arguments, 1) : [];
+      if (args != null) {
+        return this._mysql.query(query, args);
+      } else {
+        return this._mysql.query(query);
+      }
+    };
+    target.selectOne = function() {
+      var args, query;
+      query = arguments[0], args = 2 &#x3c;= arguments.length ? __slice.call(arguments, 1) : [];
+      return target.query(query, args).then(function(_arg) {
+        var fields, results;
+        results = _arg[0], fields = _arg[1];
+        if (results.length === 1) {
+          return results[0];
+        } else if (results.length === 0) {
+          throw new Error(&#x27;Query returned no result&#x27;);
+        } else {
+          throw new Error(&#x27;Query returned more than one result&#x27;);
+        }
+      });
+    };
+    return target.escape = function(value) {
+      return this._mysql.connection.escape(value);
+    };
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.mixin.ObjectTransformMixin" id="apidoc.element.datapumps.mixin.ObjectTransformMixin">
+        function <span class="apidocSignatureSpan">datapumps.mixin.</span>ObjectTransformMixin
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ObjectTransformMixin = function () {
+  return function(target) {
+    target.propertiesToLowerCase = function(data) {
+      var prop, result, value;
+      result = {};
+      for (prop in data) {
+        value = data[prop];
+        result[prop.toLowerCase()] = value;
+      }
+      return result;
+    };
+    target.requireProperty = function(obj, properties) {
+      var property, result, _i, _j, _len, _len1;
+      properties = Array.isArray(properties) ? properties : [properties];
+      for (_i = 0, _len = properties.length; _i &#x3c; _len; _i++) {
+        property = properties[_i];
+        if (obj[property] == null) {
+          throw new Error(&#x27;Missing property: &#x27; + property);
+        }
+      }
+      if (properties.length === 1) {
+        return obj[properties[0]];
+      } else {
+        result = {};
+        for (_j = 0, _len1 = properties.length; _j &#x3c; _len1; _j++) {
+          property = properties[_j];
+          result[property] = obj[property];
+        }
+        return result;
+      }
+    };
+    return target.boolValueOf = function(obj) {
+      return !(obj === null || obj === void 0 || obj === false || obj === &#x27;off&#x27; || obj === &#x27;false&#x27; || obj === 0 || obj === &#x27;no&#x27;);
+    };
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.datapumps.mixin.RestMixin" id="apidoc.element.datapumps.mixin.RestMixin">
+        function <span class="apidocSignatureSpan">datapumps.mixin.</span>RestMixin
+        <span class="apidocSignatureSpan">(target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">RestMixin = function (target) {
+  _wrapMethod(target, &#x27;get&#x27;);
+  _wrapMethod(target, &#x27;post&#x27;);
+  _wrapMethod(target, &#x27;put&#x27;);
+  _wrapMethod(target, &#x27;del&#x27;);
+  _wrapMethod(target, &#x27;head&#x27;);
+  _wrapMethod(target, &#x27;patch&#x27;);
+  _wrapMethod(target, &#x27;json&#x27;);
+  _wrapMethod(target, &#x27;postJson&#x27;);
+  _wrapMethod(target, &#x27;putJson&#x27;);
+  target.file = function() {
+    return restler.file.apply(restler, arguments);
+  };
+  return target.fromRest = function(config) {
+    var queryAndWriteInputBuffer;
+    if (!(config != null ? config.query : void 0)) {
+      throw new Error(&#x27;query key is required&#x27;);
+    }
+    if (config.resultMapping == null) {
+      config.resultMapping = function(result) {
+        return result;
+      };
+    }
+    if (config.nextPage == null) {
+      config.nextPage = function() {
+        return void 0;
+      };
+    }
+    this.from(this.createBuffer());
+    queryAndWriteInputBuffer = (function(_this) {
+      return function(nextPage) {
+        return config.query.apply(_this, [nextPage]).then(function(response) {
+          return _this.from().writeArrayAsync(config.resultMapping(response)).done(function() {
+            nextPage = config.nextPage(response);
+            if ((nextPage === void 0) || (nextPage === null)) {
+              return _this.from().seal();
+            } else {
+              return queryAndWriteInputBuffer(nextPage);
+            }
+          });
+        });
+      };
+    })(this);
+    queryAndWriteInputBuffer(void 0);
+    return this;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
